@@ -13,11 +13,15 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main className={styles.main}>
+      <div className={styles.box}>
+            <a href='#' className={styles.link}><p className={styles.number}>+1-123-456-7890</p></a>
+            <h1 className={styles.title}>Real Estate</h1>
+            </div>
         <div className={styles.bgImg}>
-          <div className={styles.title}>
+          <div className={styles.hero}>
           <h1 className={styles.heading}>Real Estate Company</h1>
           <p className={styles.parag}>Where comfort meets luxury.</p>
-          <button type='button' className={styles.btnPrimary}>Contact Us</button>
+          <div className={styles.btnContainer}><button type='button' className={styles.btnPrimary}>Contact Us</button></div>
         </div>
         </div>
       </main>

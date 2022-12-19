@@ -1,31 +1,39 @@
 .bgImg {
-    background-image: url(../public/chairs.jpg);
-    opacity: 75%;
+    background-image: url(../public/brightchairs.jpg);
+    opacity: 80%;
     width: 100vw;
     height: 90vh;
     background-size: cover;
-    z-index: -1;
+    justify-self: center;
+    
 }
 
-.title {
-   display: flex;
-   flex-direction: column;
-   padding-left: 3em;
-   backdrop-filter: blur(5px);
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    justify-self: center;
+    justify-items: center;
 }
 
 .heading {
     font-size: 6em;
     font-weight: 600;
-    color: chocolate;
-    text-shadow: -2px 2px rgb(28, 12, 0);
+    color: rgb(255, 106, 0);
+    text-shadow: -2px 2px 2px rgb(28, 12, 0);
     line-height: 1em;
+    padding-top: 2rem;
+    padding-left: 2rem;
 }
 
 .parag {
-    font-size: 3em;
-    font-weight: 500;
-    color: rgb(28, 12, 0);
+    font-size: 2.8em;
+    font-weight: 400;
+    color: rgb(3, 1, 0);
+    padding-top: 2rem;
+    padding-left: 1.5rem;
 }
 
 .btnPrimary {
@@ -36,4 +44,47 @@
     background-color: #0145ff;
     color: white;
 
+}
+
+.btnContainer {
+    padding-top: 2rem;
+    padding-left: 2rem;
+}
+
+.number {
+    color: #000;
+    padding-top: 1em;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.number:hover {
+    color: rgb(255, 115, 0);
+}
+
+.title {
+    color: #0145ff;
+}
+
+.box {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    top: 1em;
+    right: 1em;
+}
+
+@media only screen and (max-width: 700px) {
+    .hero {
+        padding-left: 2em;
+    }
+    .box {
+        display: none;
+    }
+    .heading {
+        word-wrap: ;
+    }
 }
