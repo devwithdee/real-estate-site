@@ -1,0 +1,15 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 4em;
+    background-color: #ebebeb;
+
+}
+
+.link {
+    padding: 0.25em;
+    font-size: 1.6em;
+}
