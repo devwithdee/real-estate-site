@@ -1,0 +1,39 @@
+.bgImg {
+    background-image: url(../public/chairs.jpg);
+    opacity: 75%;
+    width: 100vw;
+    height: 90vh;
+    background-size: cover;
+    z-index: -1;
+}
+
+.title {
+   display: flex;
+   flex-direction: column;
+   padding-left: 3em;
+   backdrop-filter: blur(5px);
+}
+
+.heading {
+    font-size: 6em;
+    font-weight: 600;
+    color: chocolate;
+    text-shadow: -2px 2px rgb(28, 12, 0);
+    line-height: 1em;
+}
+
+.parag {
+    font-size: 3em;
+    font-weight: 500;
+    color: rgb(28, 12, 0);
+}
+
+.btnPrimary {
+    width: 10em;
+    height: 3em;
+    border-radius: 5px;
+    border-style: none;
+    background-color: #0145ff;
+    color: white;
+
+}

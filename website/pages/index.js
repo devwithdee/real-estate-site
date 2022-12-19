@@ -13,6 +13,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main className={styles.main}>
+        <div className={styles.bgImg}>
+          <div className={styles.title}>
+          <h1 className={styles.heading}>Real Estate Company</h1>
+          <p className={styles.parag}>Where comfort meets luxury.</p>
+          <button type='button' className={styles.btnPrimary}>Contact Us</button>
+        </div>
+        </div>
       </main>
     </>
   )
