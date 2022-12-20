@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;1,300;1,400;1,700&display=swap');
+
+
 .bgImg {
     background-image: url(../public/brightchairs.jpg);
     background-size: cover;
@@ -21,14 +24,15 @@
 }
 
 .heading {
-    font-size: 6em;
-    font-weight: 600;
+    font-size: 5em;
+    font-weight: 300;
     color: var(--white);
-    text-shadow: -2px 2px 2px rgb(28, 12, 0);
+    text-shadow: -2px 2px 40px rgba(120, 109, 101, 0.329);
     line-height: 1em;
     padding-top: 2rem;
     padding-left: 2rem;
 }
+
 
 .parag {
     font-size: 2.8em;
@@ -65,11 +69,45 @@
     padding-top: 2rem;
 }
 
+.features {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    padding: 5em;
+    background-color: #645035;
+
+}
+
+.title {
+    color: var(--brown);
+    text-align: center;
+    padding: 2em;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 200;
+}
+
+.features {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: center;
+    gap: 2em;
+    background-color: var(--brown);
+    text-align: center;
+}
+
 @media only screen and (max-width: 700px) {
     .heading {
         word-wrap: ;
     }
     .heading {
         font-size: 4em;
+    }
+    .features {
+        flex-direction: column;
+        gap: 2em;
+    
     }
 }

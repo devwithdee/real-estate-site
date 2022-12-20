@@ -2,6 +2,8 @@ import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import Search from '../components/searchbar';
+import Slide from '../components/imageSlide';
+import FeaturesCard from '../components/card';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,11 +18,28 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.bgImg}>
           <div className={styles.hero}>
-          <h1 className={styles.heading}>Discover your new home.</h1>
-          <div className={styles.searchBar}>
+            <h1 className={styles.heading}>Discover your new home.</h1>
+            <div className={styles.searchBar}>
               <Search />
+            </div>
           </div>
         </div>
+        <h1 className={styles.title}>Our Locations</h1>
+        <Slide />
+        <h1 className={styles.title}>Features</h1>
+        <div className={styles.features}>
+          <FeaturesCard
+            image="stainlesskitchen.jpg"
+            title="Stainless Steel Appliances"
+          />
+          <FeaturesCard
+            image="fitness.jpg"
+            title="Fitness Center"
+          />
+          <FeaturesCard
+            image="furnished.jpg"
+            title="Furnished Homes"
+          />
         </div>
       </main>
     </>
