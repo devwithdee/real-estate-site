@@ -1,11 +1,13 @@
 .bgImg {
     background-image: url(../public/brightchairs.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     opacity: 80%;
     width: 100vw;
-    height: 90vh;
-    background-size: cover;
+    height: 480px;
     justify-self: center;
-    
+
 }
 
 .hero {
@@ -21,7 +23,7 @@
 .heading {
     font-size: 6em;
     font-weight: 600;
-    color: rgb(255, 106, 0);
+    color: var(--white);
     text-shadow: -2px 2px 2px rgb(28, 12, 0);
     line-height: 1em;
     padding-top: 2rem;
@@ -51,40 +53,23 @@
     padding-left: 2rem;
 }
 
-.number {
-    color: #000;
-    padding-top: 1em;
+
+.searchBar {
+    padding: 2rem;
 }
 
-.link {
-    text-decoration: none;
-}
-
-.number:hover {
-    color: rgb(255, 115, 0);
-}
-
-.title {
-    color: #0145ff;
-}
-
-.box {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    gap: 1em;
-    top: 1em;
-    right: 1em;
+.downarrow {
+    width: 4.5rem;
+    height: 4.5rem;
+    color: var(--white);
+    padding-top: 2rem;
 }
 
 @media only screen and (max-width: 700px) {
-    .hero {
-        padding-left: 2em;
-    }
-    .box {
-        display: none;
-    }
     .heading {
         word-wrap: ;
+    }
+    .heading {
+        font-size: 4em;
     }
 }

@@ -1,9 +1,9 @@
-const Features = () => {
+const Amentities = () => {
     return ( 
         <div className="main">
-            <h1>Features</h1>
+            <h1>Amentities</h1>
         </div>
      );
 }
  
-export default Features;
+export default Amentities;

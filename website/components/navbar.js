@@ -2,18 +2,14 @@ import Link from 'next/link'
 import { Nav, Button } from 'react-bootstrap';
 import styles from '../styles/navbar.module.css';
 
-
 const Navbar = () => {
 
 
     return (
         <Nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-xl">
-
-                <img src="home.png" width={65} height={65}></img>
-
                 <Link href='/' className="nav-link">
-                    Home
+                    <img src="logo.png" width={65} height={65}></img>
                 </Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -22,43 +18,52 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="collapse">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item">
-                            <Link href='/about' className="nav-link">
-                                About
+                            <Link href='/gallery' className="nav-link">
+                                Gallery
                             </Link>
                         </li>
                         <li className="nav-item">
                             <Link href='/features' className="nav-link">
-                                Features
+                                Amentities
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link href='/locations' className="nav-link">
-                                Locations
+                            <Link href='/listings' className="nav-link">
+                                Availability
                             </Link>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Find Your Home
+                                Apply/Login
                             </a>
                             <ul class="dropdown-menu">
-                                <li><Link href='/availability' className="nav-link">
-                                    Availability
-                                </Link></li>
                                 <li><Link href='/login' className="nav-link">
-                                    Apply
+                                    Residents
+                                </Link></li>
+                                <li><Link href='/applyPortal' className="nav-link">
+                                    Applicants
                                 </Link></li>
                             </ul>
                         </li>
                     </ul>
                     <ul className="navbar-nav px-3">
                         <li className="nav-item text-nowrap">
+                        <Link href='/contact' className="nav-link">
                             <Button className="nav-link text-light">
                                 Contact
                             </Button>
+                        </Link>
+                        </li>
+                    </ul>
+                    <ul className="navbar-nav px-3">
+                        <li className="nav-item text-nowrap">
+                        <Link href='#' className="nav-link">
+                                +1(234)-567-8910
+                        </Link>
                         </li>
                     </ul>
                 </div >
-            </div >
+            </div>
         </Nav >
     );
 }
