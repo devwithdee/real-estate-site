@@ -25,7 +25,14 @@ export default function Home() {
           </div>
         </div>
         <h1 className={styles.title}>Our Locations</h1>
-        <Slide />
+        <Slide 
+          title_1="Fox Chapel"
+          image_1="foxchapel.jpg"
+          alt_1="Fox Chapel"
+          title_2="Pittsburgh"
+          image_2="pitt.jpg"
+          alt_2="Pittsburgh"
+          />
         <h1 className={styles.title}>Features</h1>
         <div className={styles.features}>
           <FeaturesCard

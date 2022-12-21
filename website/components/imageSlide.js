@@ -1,28 +1,28 @@
 import Carousel from 'react-bootstrap/Carousel';
 import styles from '../styles/imageSlide.module.css'
 
-function Slide() {
+function Slide(props) {
     return (
         <div className={styles.slide}>
         <Carousel className={styles.wrapper}>
             <Carousel.Item interval={2500}>
                 <Carousel.Caption>
-                    <h3>Fox Chapel</h3>
+                    <h3>{props.title_1}</h3>
                 </Carousel.Caption>
                 <img
                     className='d-block w-100'
-                    src='foxchapel.jpg'
-                    alt='foxchapel image'
+                    src={props.image_1}
+                    alt={props.alt_1}
                 />
             </Carousel.Item>
             <Carousel.Item interval={2500}>
             <Carousel.Caption>
-                    <h3>Pittsburgh</h3>
+                    <h3>{props.title_2}</h3>
                 </Carousel.Caption>
                 <img
                     className='d-block w-100'
-                    src='pitt.jpg'
-                    alt='pittsburgh image'
+                    src={props.image_2}
+                    alt={props.alt_2}
                 />
             </Carousel.Item>
         </Carousel>
