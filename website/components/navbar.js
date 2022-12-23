@@ -49,7 +49,7 @@ const Navbar = () => {
                     <ul className="navbar-nav px-3">
                         <li className="nav-item text-nowrap">
                         <Link href='/contact' className="nav-link">
-                            <Button className="nav-link text-light">
+                            <Button className={styles.btn}>
                                 Contact
                             </Button>
                         </Link>

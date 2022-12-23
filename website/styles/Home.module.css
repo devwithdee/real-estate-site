@@ -24,7 +24,7 @@
 }
 
 .heading {
-    font-size: 5em;
+    font-size: 6em;
     font-weight: 300;
     color: var(--white);
     text-shadow: -2px 2px 40px rgba(120, 109, 101, 0.329);
@@ -42,15 +42,6 @@
     padding-left: 1.5rem;
 }
 
-.btnPrimary {
-    width: 10em;
-    height: 3em;
-    border-radius: 5px;
-    border-style: none;
-    background-color: #0145ff;
-    color: white;
-
-}
 
 .btnContainer {
     padding-top: 2rem;
@@ -58,8 +49,23 @@
 }
 
 
-.searchBar {
-    padding: 2rem;
+.viewBtnContainer {
+    padding: 3rem;
+}
+
+.viewBtn {
+    background-color: teal;
+    width: 10em;
+    height: 4em;
+    border: 1px solid white;
+    box-shadow: 0px 0px 2px 0px #16282890;
+    font-weight: 400;
+    font-size: large;
+}
+
+.viewBtn:hover {
+    background-color: var(--teal);
+    border: 1px solid white;
 }
 
 .downarrow {
@@ -100,10 +106,10 @@
 
 @media only screen and (max-width: 700px) {
     .heading {
-        word-wrap: ;
+        word-wrap: wrap ;
     }
     .heading {
-        font-size: 4em;
+        font-size: 5em;
     }
     .features {
         flex-direction: column;

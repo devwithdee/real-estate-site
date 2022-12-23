@@ -6,33 +6,33 @@ import Image from 'react-bootstrap/Image';
 const Gallery = () => {
     return (
         <div className="main">
-            <Container >
+            <Container style={{ paddingBottom: '4em' }} >
                 <Row>
                     <Col className="p-3">
-                        <Image src="image_1.jpg" width={200} height={200} rounded />
+                        <Image src="trailsbed.jpg" width={200} height={200} rounded />
                     </Col>
                     <Col className="p-3">
-                        <Image src="image_2.jpg" width={200} height={200} rounded />
+                        <Image src="trailskitchen.jpg" width={200} height={200} rounded />
                     </Col>
                     <Col className="p-3">
-                        <Image src="image_3.jpg" width={200} height={200} rounded />
+                        <Image src="trailsroom.jpg" width={200} height={200} rounded />
                     </Col>
                     <Col className="p-3">
-                        <Image src="image_4.jpg" width={200}  height={200} rounded />
+                        <Image src="mbed.jpg" width={200}  height={200} rounded />
                     </Col>
                 </Row>
                 <Row>
                     <Col className="p-3">
-                        <Image src="image_5.jpg" width={200} height={200} rounded />
+                        <Image src="mkitchen.jpg" width={200} height={200} rounded />
                     </Col>
                     <Col className="p-3">
-                        <Image src="image_6.jpg" width={200} height={200} rounded />
+                        <Image src="mliving.jpg" width={200} height={200} rounded />
                     </Col>
                     <Col className="p-3">
-                        <Image src="image_7.jpg" width={200} height={200} rounded />
+                        <Image src="pitt.jpg" width={200} height={200} rounded />
                     </Col>
                     <Col className="p-3">
-                        <Image src="image_8.jpg" width={200} height={200} rounded />
+                        <Image src="foxchapel.jpg" width={200} height={200} rounded />
                     </Col>
                 </Row>
             </Container>

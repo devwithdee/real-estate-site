@@ -10,6 +10,17 @@
     text-align: center;
 }
 
+.btn {
+    background-color: teal;
+    width: 5em;
+    height: 3em;
+    border: none;
+}
+
+.btn:hover {
+    background-color: var(--teal);
+}
+
 .number:hover {
     color: var(--teal);
 }

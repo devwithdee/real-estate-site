@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
-import Search from '../components/searchbar';
 import Slide from '../components/imageSlide';
 import FeaturesCard from '../components/card';
+import { Button } from 'react-bootstrap';
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,8 +20,8 @@ export default function Home() {
         <div className={styles.bgImg}>
           <div className={styles.hero}>
             <h1 className={styles.heading}>Discover your new home.</h1>
-            <div className={styles.searchBar}>
-              <Search />
+            <div className={styles.viewBtnContainer}>
+            <Link href="/listings"><Button className={styles.viewBtn}>View Listings</Button></Link>
             </div>
           </div>
         </div>
