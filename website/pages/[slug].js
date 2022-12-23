@@ -9,9 +9,6 @@ const ApartmentPage = ( data ) => {
     const router = useRouter();
     const { slug } = router.query;
 
-    if (router.isFallback) {
-        <h1>Data is loading</h1>;
-    }
 
     const newArr = ApartmentData.find(data => data.slug === slug);
 
@@ -30,7 +27,8 @@ const ApartmentPage = ( data ) => {
                 about={data.about}
                 features={data.features}
                 beds={data.bedrooms}
-                details={data.details}
+                details1={data.details[0]}
+                details2={data.details[1]}
 
             />
         )
@@ -42,5 +40,29 @@ const ApartmentPage = ( data ) => {
         </div>
  );
 }
+ 
+export async function getStaticProps() {
+  
+    const res = await fetch('https://.../[slug]')
+    const data = await res.json()
+  
+    return {
+      props: {
+        data,
+      },
+    }
+  }
+
+  export async function getStaticPaths() {
+  
+    return {
+     paths: [
+         '/[...slug]',
+         { params: { slug: '/[...slug]'}},
+     ],
+     fallback: false,
+    }
+   }
+
  
 export default ApartmentPage;

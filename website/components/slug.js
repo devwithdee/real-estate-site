@@ -30,8 +30,8 @@ const DetailsPage = (props) => {
                 <p>{props.features}</p>
                 <p>Bedrooms: {props.beds}</p>
                 <ul className={styles.details}>
-                <li>{props.details[0]}</li>
-                <li>{props.details[1]}</li>
+                <li>{props.details1}</li>
+                <li>{props.details2}</li>
                 </ul>
             </div>
         </div>
