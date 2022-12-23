@@ -9,6 +9,10 @@ const ApartmentPage = ( data ) => {
     const router = useRouter();
     const { slug } = router.query;
 
+    if (router.isFallback) {
+        <h1>Data is loading</h1>;
+    }
+
     const newArr = ApartmentData.find(data => data.slug === slug);
 
     let results =[newArr];
