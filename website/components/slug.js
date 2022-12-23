@@ -9,6 +9,7 @@ const DetailsPage = (props) => {
                 <img
                     className='d-block w-100'
                     src={props.image1}
+                    alt=""
                 />
             </Carousel.Item>
             <Carousel.Item>
@@ -16,6 +17,7 @@ const DetailsPage = (props) => {
                 <img
                     className='d-block w-100'
                     src={props.image2}
+                    alt=""
                 />
             </Carousel.Item>
         </Carousel>
