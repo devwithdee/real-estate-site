@@ -57,8 +57,8 @@ export async function getStaticProps() {
   
     return {
      paths: [
-         '/[...slug]',
-         { params: { slug: '/[...slug]'}},
+         '/[slug]',
+         { params: { slug: '/[slug]'}},
      ],
      fallback: false,
     }
