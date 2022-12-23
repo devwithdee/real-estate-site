@@ -2,6 +2,7 @@ import styles from '../styles/footer.module.css'
 
 const Footer = () => {
     return (
+        <div>
         <div className={styles.footer}>
             <div className={styles.container}>
                 <h1 className={styles.h1}>Contact</h1>
@@ -32,9 +33,13 @@ const Footer = () => {
             </div>
             <div className={styles.container}>
                 <h3 className={styles.h1}>Disclaimer: </h3>
-                <p className={styles.p}>All of the content on this site is fake.<br />I do not own the images.</p>
+                <p className={styles.p}>All of the content on this site is fake.<br />All of the images used are from unsplash.</p>
             </div>
         </div>
+        <div className={styles.container}>
+        <h3 className={styles.h3}>Designed and Developed by Donna-Jo Bohl </h3>
+    </div>
+    </div>
     );
 }
 
