@@ -1,4 +1,4 @@
-import LocationCard from '../components/locationCard';
+import LocationCard from '../../components/locationCard';
 import styles from '../styles/listings.module.css'
 import Link from 'next/link'
 
@@ -16,7 +16,7 @@ const Listings = () => {
             </Link>
             <Link href='/meadows'>
             <LocationCard
-            image="pitt.jpg"
+            image="foxchapel.jpg"
             title="Meadows Apartments"
             text="Fox Chapel, PA"/>
             </Link>
