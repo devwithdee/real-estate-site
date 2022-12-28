@@ -1,6 +1,6 @@
 import DetailsPage from '../components/slug';
 import { useRouter } from 'next/router';
-import Data from './apartments';
+import Data from '../utils/apartments';
 
 
 const ApartmentData = () => {
