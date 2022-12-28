@@ -1,12 +1,14 @@
+import Image from 'next/image';
 import Carousel from 'react-bootstrap/Carousel';
 import styles from '../styles/slug.module.css';
+
 
 const DetailsPage = (props) => {
     return ( 
         <div className={styles.slide}>
             <Carousel className={styles.wrapper}>
             <Carousel.Item>
-                <img
+                <Image
                     className='d-block w-100'
                     src={props.image1}
                     alt=""
@@ -14,7 +16,7 @@ const DetailsPage = (props) => {
             </Carousel.Item>
             <Carousel.Item>
 
-                <img
+                <Image
                     className='d-block w-100'
                     src={props.image2}
                     alt=""

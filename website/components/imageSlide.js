@@ -1,5 +1,6 @@
 import Carousel from 'react-bootstrap/Carousel';
-import styles from '../styles/imageSlide.module.css'
+import styles from '../styles/imageSlide.module.css';
+import Image from 'next/image';
 
 function Slide(props) {
     return (
@@ -9,7 +10,7 @@ function Slide(props) {
                 <Carousel.Caption>
                     <h3>{props.title_1}</h3>
                 </Carousel.Caption>
-                <img
+                <Image
                     className='d-block w-100'
                     src={props.image_1}
                     alt={props.alt_1}
@@ -19,7 +20,7 @@ function Slide(props) {
             <Carousel.Caption>
                     <h3>{props.title_2}</h3>
                 </Carousel.Caption>
-                <img
+                <Image
                     className='d-block w-100'
                     src={props.image_2}
                     alt={props.alt_2}
