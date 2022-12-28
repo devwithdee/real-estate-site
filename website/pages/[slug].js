@@ -1,10 +1,17 @@
-import ApartmentData from '../utils/apartments';
 import DetailsPage from '../components/slug';
-import Router
- from 'next/router';
-const ApartmentPage = () => {
-    
-    const apartmentData = ApartmentData.filter(data => data.slug === Router.query.slug);
+import { useRouter } from 'next/router';
+import Data from './apartments';
+
+
+const ApartmentData = () => {
+
+        const router = useRouter();
+        if (router.isFallback) {
+          return <div>Loading...</div>;
+        } 
+
+
+    const apartmentData = Data.filter(data => data.slug === router.query.slug);
    
     const apartments = apartmentData.map((data) => {
     
@@ -30,6 +37,7 @@ const ApartmentPage = () => {
         </div>
      );
 }
- 
- 
-export default ApartmentPage;
+
+
+
+export default ApartmentData;
