@@ -1,4 +1,4 @@
-import LocationCard from '../../components/locationCard';
+import LocationCard from '../components/locationCard';
 import styles from '../styles/listings.module.css'
 import Link from 'next/link'
 
