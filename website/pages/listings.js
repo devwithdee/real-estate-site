@@ -2,6 +2,7 @@ import LocationCard from '../components/locationCard';
 import styles from '../styles/listings.module.css'
 import Link from 'next/link'
 
+
 const Listings = () => {
     return ( 
         <div className={styles.container}>

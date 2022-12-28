@@ -105,8 +105,36 @@ a {
   text-decoration: none;
 }
 
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+/* align gallery media center on smaller devices */
+  .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .gallery-container.container {
+    padding-left: 25% !important;
+    padding-right: 25% !important;
+    margin: 0 auto;
+  }
+
+  .p-3 {
+    padding: 0 !important;
+    padding-bottom: 2em !important;
+  }
+
+  .p-3.col {
+    margin-left: 25vw;
+    margin-right: 25vw;
+    margin-top: 2em;
   }
 }

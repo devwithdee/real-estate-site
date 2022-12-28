@@ -9,6 +9,7 @@ const Meadows = () => {
     const meadowsData = MeadowsData.map((data) => {
         return (
             <AptListing key={data.key}
+                id={data.id}
                 image={data.image[0]}
                 title={data.title}
                 price={data.price}

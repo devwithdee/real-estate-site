@@ -2,6 +2,7 @@ import { Card } from "react-bootstrap";
 import React, { Component } from "react";
 import Link from 'next/link';
 
+
 const AptListing = ( props ) => {
     return (
         <div>
@@ -19,6 +20,7 @@ const AptListing = ( props ) => {
                         <button type="button" style={{ border: 'none', backgroundColor: 'var(--teal)', color: 'white', width: '3em' }}>
                             View</button>
                             </Link>
+                            
                     </Card.Text>
                 </Card.Body>
             </Card>

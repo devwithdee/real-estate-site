@@ -13,6 +13,7 @@ const MeadowsData = [
         price: 1200
     },
     {
+        id: 2,
         title: "Two Bedroom",
         availability: "01/14/2023",
         petsAllowed: true,
