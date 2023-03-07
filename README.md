@@ -3,7 +3,7 @@
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Features](#features)
-* [Pages[(#pages)
+* [Pages](#pages)
 * [Website](#website)
 
 ## General info
