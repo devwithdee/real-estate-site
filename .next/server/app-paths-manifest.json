@@ -1,9 +1,9 @@
 {
-  "/not-found": "app/not-found.js",
-  "/(main)/gallery/page": "app/(main)/gallery/page.js",
-  "/(main)/listings/page": "app/(main)/listings/page.js",
   "/page": "app/page.js",
-  "/(main)/trails/page": "app/(main)/trails/page.js",
-  "/(main)/meadows/page": "app/(main)/meadows/page.js",
-  "/(portal)/login/page": "app/(portal)/login/page.js"
+  "/(portal)/login/page": "app/(portal)/login/page.js",
+  "/(main)/listings/page": "app/(main)/listings/page.js",
+  "/(main)/listings/trails/page": "app/(main)/listings/trails/page.js",
+  "/(main)/listings/trails/[slug]/page": "app/(main)/listings/trails/[slug]/page.js",
+  "/(main)/features/page": "app/(main)/features/page.js",
+  "/(main)/gallery/page": "app/(main)/gallery/page.js"
 }

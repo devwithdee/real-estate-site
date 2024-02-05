@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import styles from './styles/home.module.css'
 import Slide from './components/imageSlide';
@@ -14,11 +13,6 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Page() {
   return (
     <>
-      <Head>
-        <title>Real Estate Website</title>
-        <meta name="description" content="Real Estate Rental Site made by Donna-Jo Bohl" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
       <main className={styles.main}>
         <div className={styles.bgImg} style={{
           backgroundImage: `url(${bgImg.src})`
@@ -46,20 +40,17 @@ export default function Page() {
           <FeaturesCard
             image="/stainlesskitchen.jpg"
             title="Stainless Steel Appliances"
-            width={50}
-            height={50}
+
           />
           <FeaturesCard
             image="/fitness.jpg"
             title="Fitness Center"
-            width={50}
-            height={50}
+  
           />
           <FeaturesCard
             image="/furnished.jpg"
             title="Furnished Homes"
-            width={50}
-            height={50}
+         
           />
         </div>
       </main>

@@ -1,4 +1,4 @@
-import AgentCard from "../components/agent";
+import AgentCard from '../../components/agent';
 
 const Contact = () => {
     return ( 

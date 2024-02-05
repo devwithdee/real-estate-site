@@ -17,7 +17,7 @@ const AptListing = ( props ) => {
                         <p>{props.details}</p>
                         <p>${props.price}</p>
                         <p>{props.availability}</p>
-                        <Link href={`/${encodeURIComponent(props.slug)}`}>
+                        <Link href={`/listings/${encodeURIComponent(props.loc)}/${encodeURIComponent(props.slug)}`}>
                         <button type="button" style={{ border: 'none', backgroundColor: 'var(--teal)', color: 'white', width: '3em' }}>
                             View</button>
                             </Link>

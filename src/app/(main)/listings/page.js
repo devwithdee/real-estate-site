@@ -8,7 +8,7 @@ const Listings = () => {
         <div className={styles.container}>
             <h1 className={styles.h1}>Listings</h1>
             <div className={styles.wrapper}>
-            <Link href='/trails'>
+            <Link href='/listings/trails'>
             <LocationCard 
             image="/pitt.jpg"
             title="Trails Apartments"
@@ -16,7 +16,7 @@ const Listings = () => {
             height={200}
             text="Pittsburgh, PA"/>
             </Link>
-            <Link href='/meadows'>
+            <Link href='/listings/meadows'>
             <LocationCard
             image="/foxchapel.jpg"
             width={100}

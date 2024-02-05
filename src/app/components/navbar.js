@@ -8,7 +8,7 @@ const Navbar = () => {
 
 
     return (
-        <Nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <Nav className="navbar navbar-expand-lg navbar-light">
             <div className="container-xl">
                 <Link href='/' className="nav-link">
                     <Image src="/logo.png" width={65} height={65} alt='logo' ></Image>
@@ -34,11 +34,12 @@ const Navbar = () => {
                                 Availability
                             </Link>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      
+                        <li className="nav-item dropdown">
+                            <a className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Apply/Login
                             </a>
-                            <ul class="dropdown-menu">
+                            <ul className="dropdown-menu">
                                 <li><Link href='/login' className="nav-link">
                                     Residents
                                 </Link></li>
