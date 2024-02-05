@@ -1,7 +1,4 @@
 {
-  "/page": "app/page.js",
-  "/(portal)/portal/login/page": "app/(portal)/portal/login/page.js",
-  "/(portal)/portal/applicant/page": "app/(portal)/portal/applicant/page.js",
-  "/(main)/features/page": "app/(main)/features/page.js",
-  "/(main)/gallery/page": "app/(main)/gallery/page.js"
+  "/not-found": "app/not-found.js",
+  "/api/submit": "app/api/submit.js"
 }

@@ -22,12 +22,6 @@ const ApartmentData = () => {
   // Get the last segment as the slug
   const slug = pathSegments[pathSegments.length - 1];
 
-  // Check if slug is defined
-  if (!slug) {
-    // Handle the case where slug is not defined
-    // For example, you can redirect the user or show an error message
-    return <div>{pathname}</div>;
-  }
   // Use routerSlug in the filter function
   const apartmentData = Data.filter(data => data.slug === slug);
 

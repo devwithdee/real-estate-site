@@ -1,62 +1,15 @@
 {
   "pages": {
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/page.css",
-      "static/chunks/app/page.js"
-    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/(main)/listings/page": [
+    "/not-found": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/(main)/listings/page.css",
-      "static/chunks/app/(main)/listings/page.js"
-    ],
-    "/(main)/listings/trails/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/(main)/listings/trails/page.css",
-      "static/chunks/app/(main)/listings/trails/page.js"
-    ],
-    "/(main)/listings/trails/[slug]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/(main)/listings/trails/[slug]/page.css",
-      "static/chunks/app/(main)/listings/trails/[slug]/page.js"
-    ],
-    "/(main)/gallery/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(main)/gallery/page.js"
-    ],
-    "/(main)/features/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/(main)/features/page.css",
-      "static/chunks/app/(main)/features/page.js"
-    ],
-    "/(main)/contact/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(main)/contact/page.js"
-    ],
-    "/(portal)/portal/login/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/(portal)/portal/login/page.css",
-      "static/chunks/app/(portal)/portal/login/page.js"
-    ],
-    "/(portal)/portal/applicant/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/(portal)/portal/applicant/page.css",
-      "static/chunks/app/(portal)/portal/applicant/page.js"
+      "static/chunks/app/not-found.js"
     ]
   }
 }
