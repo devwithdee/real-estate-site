@@ -41,11 +41,22 @@
       "static/css/app/(main)/features/page.css",
       "static/chunks/app/(main)/features/page.js"
     ],
-    "/(portal)/login/page": [
+    "/(main)/contact/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/(portal)/login/page.css",
-      "static/chunks/app/(portal)/login/page.js"
+      "static/chunks/app/(main)/contact/page.js"
+    ],
+    "/(portal)/portal/login/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(portal)/portal/login/page.css",
+      "static/chunks/app/(portal)/portal/login/page.js"
+    ],
+    "/(portal)/portal/applicant/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(portal)/portal/applicant/page.css",
+      "static/chunks/app/(portal)/portal/applicant/page.js"
     ]
   }
 }

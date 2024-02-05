@@ -11,16 +11,16 @@
 }
 
 .btn {
-    background-color: teal;
+    background-color: #4E8286;
     width: 5em;
     height: 3em;
     border: none;
 }
 
 .btn:hover {
-    background-color: var(--teal);
+    background-color: #4E8286;
 }
 
 .number:hover {
-    color: var(--teal);
+    color: #4E8286;
 }

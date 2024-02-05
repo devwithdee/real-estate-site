@@ -34,30 +34,26 @@ const Navbar = () => {
                                 Availability
                             </Link>
                         </li>
-                      
+                        <li className="nav-item text-nowrap">
+                        <Link href='/contact' className="nav-link">
+                                Contact
+                        </Link>
+                        </li>
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Apply/Login
                             </a>
                             <ul className="dropdown-menu">
-                                <li><Link href='/login' className="nav-link">
+                                <li><Link href='/portal/login' className="nav-link">
                                     Residents
                                 </Link></li>
-                                <li><Link href='/applyPortal' className="nav-link">
+                                <li><Link href='/portal/applicant' className="nav-link">
                                     Applicants
                                 </Link></li>
                             </ul>
                         </li>
                     </ul>
-                    <ul className="navbar-nav px-3">
-                        <li className="nav-item text-nowrap">
-                        <Link href='/contact' className="nav-link">
-                            <Button className={styles.btn}>
-                                Contact
-                            </Button>
-                        </Link>
-                        </li>
-                    </ul>
+                    
                     <ul className="navbar-nav px-3">
                         <li className="nav-item text-nowrap">
                         <Link href='#' className="nav-link">
