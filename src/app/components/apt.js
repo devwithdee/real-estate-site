@@ -7,7 +7,7 @@ const AptListing = ( props ) => {
     return (
         <div>
             <Card style={{ width: '18rem' }}>
-                <Card.Img variant='top' src={props.image} />
+                <Card.Img variant='top' src={props.image} width={props.width} height={props.height}/>
                 <Card.Body>
                     <Card.Title style={{ color: '#000', fontSize: '14px' }}>
                         {props.title}

@@ -19,6 +19,7 @@ const ApartmentData = () => {
             <DetailsPage key={data}
                 image1 = {data.images[0]}
                 image2 = {data.images[1]}
+                width = {data.width}
                 location = {data.location}
                 title = {data.title}
                 price = {data.price}

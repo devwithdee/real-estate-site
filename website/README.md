@@ -1,1 +1,0 @@
-Demo real estate/rental site made with next/js and bootstrap by Donna-Jo Bohl.

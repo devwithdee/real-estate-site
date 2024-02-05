@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Carousel from 'react-bootstrap/Carousel';
-import styles from '../styles/slug.module.css';
+import styles from '../../../styles/slug.module.css';
 
 
 const DetailsPage = (props) => {
@@ -12,6 +12,8 @@ const DetailsPage = (props) => {
                     className='d-block w-100'
                     src={props.image1}
                     alt=""
+                    width={100}
+                    height={300}
                 />
             </Carousel.Item>
             <Carousel.Item>
@@ -20,6 +22,8 @@ const DetailsPage = (props) => {
                     className='d-block w-100'
                     src={props.image2}
                     alt=""
+                    width={100}
+                    height={300}
                 />
             </Carousel.Item>
         </Carousel>

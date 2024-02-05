@@ -52,11 +52,13 @@ const Amenities = () => {
             </div>
             <Slide
                 title_1=""
-                image_1="fitness.jpg"
+                image_1="/fitness.jpg"
                 alt_1="Fitness Amenities Photo"
                 title_2=""
-                image_2="stainlesskitchen.jpg"
+                image_2="/stainlesskitchen.jpg"
                 alt_2="Stainless Steel Appliance Amenities Photo"
+                width={90}
+                height={300}
             />
         </div >
     );

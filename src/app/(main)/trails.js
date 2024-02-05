@@ -17,6 +17,8 @@ const Trails = () => {
                 price={data.price}
                 availability={data.availability}
                 slug={data.slug}
+                width={100}
+                height={200}
             />
         )
     })

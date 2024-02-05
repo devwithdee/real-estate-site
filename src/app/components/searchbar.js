@@ -1,5 +1,5 @@
 import { Button, Dropdown } from "react-bootstrap";
-import styles from '../styles/searchbar.module.css'
+import styles from '../../../styles/searchbar.module.css'
 
 
 const Search = () => {

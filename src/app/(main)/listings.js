@@ -10,13 +10,17 @@ const Listings = () => {
             <div className={styles.wrapper}>
             <Link href='/trails'>
             <LocationCard 
-            image="pitt.jpg"
+            image="/pitt.jpg"
             title="Trails Apartments"
+            width={100}
+            height={200}
             text="Pittsburgh, PA"/>
             </Link>
             <Link href='/meadows'>
             <LocationCard
-            image="foxchapel.jpg"
+            image="/foxchapel.jpg"
+            width={100}
+            height={200}
             title="Meadows Apartments"
             text="Fox Chapel, PA"/>
             </Link>

@@ -31,24 +31,26 @@ export default function Home() {
         <h1 className={styles.title}>Our Locations</h1>
         <Slide
           title_1="Fox Chapel"
-          image_1="foxchapel.jpg"
+          image_1="/foxchapel.jpg"
           alt_1="Fox Chapel"
           title_2="Pittsburgh"
-          image_2="pitt.jpg"
+          image_2="/pitt.jpg"
           alt_2="Pittsburgh"
+          width={90}
+          height={300}
         />
         <h1 className={styles.title}>Features</h1>
         <div className={styles.features}>
           <FeaturesCard
-            image="stainlesskitchen.jpg"
+            image="/stainlesskitchen.jpg"
             title="Stainless Steel Appliances"
           />
           <FeaturesCard
-            image="fitness.jpg"
+            image="/fitness.jpg"
             title="Fitness Center"
           />
           <FeaturesCard
-            image="furnished.jpg"
+            image="/furnished.jpg"
             title="Furnished Homes"
           />
         </div>
