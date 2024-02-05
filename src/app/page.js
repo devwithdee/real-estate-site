@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { Inter } from '@next/font/google'
-import styles from './styles/Home.module.css'
+import styles from './styles/home.module.css'
 import Slide from './components/imageSlide';
 import FeaturesCard from './components/card';
 import { Button } from 'react-bootstrap';
@@ -9,10 +9,8 @@ import bgImg from '../../public/brightchairs.jpg';
 export const metadata = {
   title: 'Next.js',
 }
- 
-
 const inter = Inter({ subsets: ['latin'] })
-
+ 
 export default function Page() {
   return (
     <>
@@ -48,17 +46,24 @@ export default function Page() {
           <FeaturesCard
             image="/stainlesskitchen.jpg"
             title="Stainless Steel Appliances"
+            width={50}
+            height={50}
           />
           <FeaturesCard
             image="/fitness.jpg"
             title="Fitness Center"
+            width={50}
+            height={50}
           />
           <FeaturesCard
             image="/furnished.jpg"
             title="Furnished Homes"
+            width={50}
+            height={50}
           />
         </div>
       </main>
     </>
   )
 }
+ 

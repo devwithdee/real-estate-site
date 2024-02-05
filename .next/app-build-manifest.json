@@ -6,11 +6,46 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
+    "/(main)/gallery/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(main)/gallery/page.js"
+    ],
+    "/(main)/listings/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(main)/listings/page.css",
+      "static/chunks/app/(main)/listings/page.js"
+    ],
     "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/page.css",
       "static/chunks/app/page.js"
+    ],
+    "/(main)/features/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(main)/features/page.css",
+      "static/chunks/app/(main)/features/page.js"
+    ],
+    "/(main)/trails/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(main)/trails/page.css",
+      "static/chunks/app/(main)/trails/page.js"
+    ],
+    "/(main)/meadows/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(main)/meadows/page.css",
+      "static/chunks/app/(main)/meadows/page.js"
+    ],
+    "/(portal)/login/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(portal)/login/page.css",
+      "static/chunks/app/(portal)/login/page.js"
     ],
     "/not-found": [
       "static/chunks/webpack.js",

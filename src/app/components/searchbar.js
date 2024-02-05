@@ -1,3 +1,4 @@
+"use client"
 import { Button, Dropdown } from "react-bootstrap";
 import styles from '../styles/searchbar.module.css'
 

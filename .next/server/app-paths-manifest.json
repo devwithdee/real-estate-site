@@ -1,3 +1,9 @@
 {
-  "/page": "app/page.js"
+  "/not-found": "app/not-found.js",
+  "/(main)/gallery/page": "app/(main)/gallery/page.js",
+  "/(main)/listings/page": "app/(main)/listings/page.js",
+  "/page": "app/page.js",
+  "/(main)/trails/page": "app/(main)/trails/page.js",
+  "/(main)/meadows/page": "app/(main)/meadows/page.js",
+  "/(portal)/login/page": "app/(portal)/login/page.js"
 }

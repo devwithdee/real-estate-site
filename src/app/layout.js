@@ -1,12 +1,12 @@
 import Footer from "./components/footer";
 import Navbar from "./components/navbar";
-import styles from './styles/Home.module.css';
+import './global.css'
 
 export default function RootLayout({ children }) {
     return (
       <html lang="en">
         < Navbar />
-        <body>{children}</body>
+        {children}
         < Footer />
       </html>
     )

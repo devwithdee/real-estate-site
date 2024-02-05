@@ -1,3 +1,124 @@
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/next@14.1.0_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/.pnpm/next@14.1.0_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/app/styles/home.module.css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;1,300;1,400;1,700&display=swap');
+
+
+.home_bgImg__axx4h {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 80%;
+    width: 100vw;
+    height: 480px;
+    justify-self: center;
+
+}
+
+.home_hero__wl6bJ {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    justify-self: center;
+    justify-items: center;
+}
+
+.home_heading__wYlfM {
+    font-size: 6em;
+    font-weight: 300;
+    color: var(--white);
+    text-shadow: -2px 2px 40px rgba(120, 109, 101, 0.329);
+    line-height: 1em;
+    padding-top: 2rem;
+    padding-left: 2rem;
+}
+
+
+.home_parag__WVg5v {
+    font-size: 2.8em;
+    font-weight: 400;
+    color: rgb(3, 1, 0);
+    padding-top: 2rem;
+    padding-left: 1.5rem;
+}
+
+
+.home_btnContainer__Sg1Jc {
+    padding-top: 2rem;
+    padding-left: 2rem;
+}
+
+
+.home_viewBtnContainer__TGEGz {
+    padding: 3rem;
+}
+
+.home_viewBtn__8kPAL {
+    background-color: teal;
+    width: 10em;
+    height: 4em;
+    border: 1px solid white;
+    box-shadow: 0px 0px 2px 0px #16282890;
+    font-weight: 400;
+    font-size: large;
+}
+
+.home_viewBtn__8kPAL:hover {
+    background-color: var(--teal);
+    border: 1px solid white;
+}
+
+.home_downarrow__1tecu {
+    width: 4.5rem;
+    height: 4.5rem;
+    color: var(--white);
+    padding-top: 2rem;
+}
+
+.home_features__XBUTB {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    padding: 5em;
+    background-color: #645035;
+
+}
+
+.home_title__jhZo4 {
+    color: var(--brown);
+    text-align: center;
+    padding: 2em;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 200;
+}
+
+.home_features__XBUTB {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: center;
+    gap: 2em;
+    background-color: var(--brown);
+    text-align: center;
+}
+
+@media only screen and (max-width: 700px) {
+    .home_heading__wYlfM {
+        word-wrap: wrap ;
+    }
+    .home_heading__wYlfM {
+        font-size: 5em;
+    }
+    .home_features__XBUTB {
+        flex-direction: column;
+        gap: 2em;
+    
+    }
+}
 /*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/.pnpm/next@14.1.0_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[4].use[1]!./node_modules/.pnpm/next@14.1.0_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[11].oneOf[4].use[2]!./node_modules/.pnpm/@next+font@13.0.7/node_modules/@next/font/google/target.css?{"path":"src/app/page.js","import":"Inter","arguments":[{"subsets":["latin"]}],"variableName":"inter"} ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/

@@ -1,5 +1,5 @@
+"use client"
 import Card from 'react-bootstrap/Card';
-
 
 const AgentCard = (props) => {
     return ( 

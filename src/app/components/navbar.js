@@ -1,3 +1,4 @@
+"use client"
 import Link from 'next/link'
 import { Nav, Button } from 'react-bootstrap';
 import styles from '../styles/navbar.module.css';
