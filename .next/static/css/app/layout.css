@@ -1,0 +1,210 @@
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/next@14.1.0_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/.pnpm/next@14.1.0_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/app/styles/Home.module.css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;1,300;1,400;1,700&display=swap');
+
+
+.Home_bgImg__gGG_V {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 80%;
+    width: 100vw;
+    height: 480px;
+    justify-self: center;
+
+}
+
+.Home_hero__Tgz30 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    justify-self: center;
+    justify-items: center;
+}
+
+.Home_heading__5E3x5 {
+    font-size: 6em;
+    font-weight: 300;
+    color: var(--white);
+    text-shadow: -2px 2px 40px rgba(120, 109, 101, 0.329);
+    line-height: 1em;
+    padding-top: 2rem;
+    padding-left: 2rem;
+}
+
+
+.Home_parag__9W0T_ {
+    font-size: 2.8em;
+    font-weight: 400;
+    color: rgb(3, 1, 0);
+    padding-top: 2rem;
+    padding-left: 1.5rem;
+}
+
+
+.Home_btnContainer__xqQ83 {
+    padding-top: 2rem;
+    padding-left: 2rem;
+}
+
+
+.Home_viewBtnContainer__06CRI {
+    padding: 3rem;
+}
+
+.Home_viewBtn__4i6h4 {
+    background-color: teal;
+    width: 10em;
+    height: 4em;
+    border: 1px solid white;
+    box-shadow: 0px 0px 2px 0px #16282890;
+    font-weight: 400;
+    font-size: large;
+}
+
+.Home_viewBtn__4i6h4:hover {
+    background-color: var(--teal);
+    border: 1px solid white;
+}
+
+.Home_downarrow__FCKJ4 {
+    width: 4.5rem;
+    height: 4.5rem;
+    color: var(--white);
+    padding-top: 2rem;
+}
+
+.Home_features__8YpQ5 {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    padding: 5em;
+    background-color: #645035;
+
+}
+
+.Home_title__u58B2 {
+    color: var(--brown);
+    text-align: center;
+    padding: 2em;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 200;
+}
+
+.Home_features__8YpQ5 {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: center;
+    gap: 2em;
+    background-color: var(--brown);
+    text-align: center;
+}
+
+@media only screen and (max-width: 700px) {
+    .Home_heading__5E3x5 {
+        word-wrap: wrap ;
+    }
+    .Home_heading__5E3x5 {
+        font-size: 5em;
+    }
+    .Home_features__8YpQ5 {
+        flex-direction: column;
+        gap: 2em;
+    
+    }
+}
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/next@14.1.0_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/.pnpm/next@14.1.0_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/app/styles/footer.module.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.footer_footer__17AzZ {
+
+    width: 100vw;
+    height: -moz-fit-content;
+    height: fit-content;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    padding: 1.5em;
+    background-color: var(--light-grey);
+}
+
+.footer_container__bI6YQ {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.footer_ul1__ZMyx9 {
+    list-style: none;
+    padding: 0;
+}
+
+
+.footer_ul2__m_X6N {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    padding: 0;
+    line-height: 1em;
+}
+
+.footer_li__uuL1d {
+    font-size: small;
+}
+
+.footer_h1__DCy14 {
+    font-size: 1em;
+    text-decoration: underline;
+    font-weight: 800;
+}
+
+.footer_h3__p5Rfb {
+    font-size: 1em;
+    font-weight: 300;
+}
+.footer_p__7XWdb {
+    font-size: small;
+}
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/next@14.1.0_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/.pnpm/next@14.1.0_react-dom@18.2.0_react@18.2.0/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./src/app/styles/navbar.module.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.navbar_number__QYnLJ {
+    color: #000;
+    padding: 0;
+    font-size: 0.8em;
+    align-self: center;
+}
+
+.navbar_link__GTE3g {
+    text-decoration: none;
+    text-align: center;
+}
+
+.navbar_btn__WcA0R {
+    background-color: teal;
+    width: 5em;
+    height: 3em;
+    border: none;
+}
+
+.navbar_btn__WcA0R:hover {
+    background-color: var(--teal);
+}
+
+.navbar_number__QYnLJ:hover {
+    color: var(--teal);
+}

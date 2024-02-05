@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Nav, Button } from 'react-bootstrap';
-import styles from '../../../styles/navbar.module.css';
+import styles from '../styles/navbar.module.css';
 import Image from 'next/image';
 
 const Navbar = () => {

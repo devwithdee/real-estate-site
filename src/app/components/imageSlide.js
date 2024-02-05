@@ -1,5 +1,5 @@
 import Carousel from 'react-bootstrap/Carousel';
-import styles from '../../../styles/imageSlide.module.css';
+import styles from '../styles/imageSlide.module.css';
 import Image from 'next/image';
 
 function Slide(props) {
