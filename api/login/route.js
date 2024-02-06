@@ -1,7 +1,10 @@
 import { db } from '@vercel/postgres';
 import { hash, compare } from 'bcrypt';
+import Cors from 'cors';
 
 export default async function login(req, res) {
+
+
   try {
     const { email, password } = req.body;
     console.log('User Input Password:', password);

@@ -9,36 +9,36 @@ const ApplicantPortal = () => {
 
   async function onSubmit(event) {
     event.preventDefault();
-  setIsLoading(true);
-
-  const formData = new FormData(event.currentTarget);
-  const formDataObject = {};
+    setIsLoading(true);
   
-  // Convert FormData to an object
-  formData.forEach((value, key) => {
-    formDataObject[key] = value;
-  });
-
-  try {
-    const response = await fetch('/api/submit', {
-      method: 'POST',
-      body: JSON.stringify(formDataObject),
-      headers: {
-        'Content-Type': 'application/json',
-      },
+    const formData = new FormData(event.currentTarget);
+    const formDataObject = {};
+  
+    // Convert FormData to an object
+    formData.forEach((value, key) => {
+      formDataObject[key] = value;
     });
-
-    if (response.ok) {
-      const data = await response.json();
-      console.log('User created:', data);
-    } else {
-      console.error('Failed to create user:', response.statusText);
+  
+    // Ensure the password field is accessed correctly
+    formDataObject.password = formDataObject.confirm_password;
+  
+    try {
+      const response = await fetch('/api/submit/route', {
+        method: 'POST',
+        body: JSON.stringify(formDataObject),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+  
+      // ... rest of your code ...
+    } catch (error) {
+      console.error('Error creating user:', error);
+    } finally {
+      setIsLoading(false);
     }
-  } catch (error) {
-    console.error('Error creating user:', error);
-  } finally {
-    setIsLoading(false);
-  }
+
+  
 }
   return (
     <div className={styles.container}>

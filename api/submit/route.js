@@ -2,6 +2,7 @@ import { db } from '@vercel/postgres';
 import { hash } from 'bcrypt';
 
 export default async function handler(req, res) {
+
   let client; // Declare the client variable using let
 
   try {
