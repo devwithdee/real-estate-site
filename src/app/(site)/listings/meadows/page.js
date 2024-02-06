@@ -17,7 +17,7 @@ const Meadows = () => {
                 loc={'meadows'}
                 slug={data.slug}
                 width={100}
-                height={100}
+                height={200}
             />
         )
     })

@@ -1,11 +1,17 @@
 "use client"
 import Link from 'next/link'
-import { Nav, Button } from 'react-bootstrap';
+import { Nav } from 'react-bootstrap';
 import styles from '../styles/navbar.module.css';
 import Image from 'next/image';
+import { useAccount } from 'context/account';
 
 const Navbar = () => {
 
+    const { isLoggedIn, setIsLoggedIn } = useAccount();
+
+    const logout = () => {
+        setIsLoggedIn(false);
+    };
 
     return (
         <Nav className="navbar navbar-expand-lg navbar-light">
@@ -35,30 +41,43 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li className="nav-item text-nowrap">
-                        <Link href='/contact' className="nav-link">
+                            <Link href='/contact' className="nav-link">
                                 Contact
-                        </Link>
+                            </Link>
                         </li>
                         <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Apply/Login
-                            </a>
-                            <ul className="dropdown-menu">
-                                <li><Link href='/portal/login' className="nav-link">
-                                    Residents
-                                </Link></li>
-                                <li><Link href='/portal/applicant' className="nav-link">
-                                    Applicants
-                                </Link></li>
-                            </ul>
+                            {isLoggedIn ?
+                                <a className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Hello, User!
+                                </a> :
+                                <a className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Login
+                                </a>
+                            }
+                            {isLoggedIn ?
+                                <ul className={`dropdown-menu ${styles.dropdown}`}>
+                                    <li><Link href='/portal/account' className="nav-link">
+                                        View Account
+                                    </Link></li>
+                                    <li><button className={styles.btn} onClick={logout}>Logout</button></li>
+                                </ul> :
+                                <ul className="dropdown-menu">
+                                    <li><Link href='/portal/login' className="nav-link">
+                                        Login
+                                    </Link></li>
+                                    <li><Link href='/portal/applicant' className="nav-link">
+                                        Create Account
+                                    </Link></li>
+                                </ul>
+                            }
                         </li>
                     </ul>
-                    
+
                     <ul className="navbar-nav px-3">
                         <li className="nav-item text-nowrap">
-                        <Link href='#' className="nav-link">
+                            <Link href='#' className="nav-link">
                                 +1(234)-567-8910
-                        </Link>
+                            </Link>
                         </li>
                     </ul>
                 </div >

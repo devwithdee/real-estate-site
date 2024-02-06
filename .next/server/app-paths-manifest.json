@@ -1,5 +1,9 @@
 {
-  "/not-found": "app/not-found.js",
+  "/(site)/listings/meadows/page": "app/(site)/listings/meadows/page.js",
   "/page": "app/page.js",
-  "/api/submit": "app/api/submit.js"
+  "/(site)/features/page": "app/(site)/features/page.js",
+  "/(site)/contact/page": "app/(site)/contact/page.js",
+  "/(portal)/portal/applicant/page": "app/(portal)/portal/applicant/page.js",
+  "/(site)/gallery/page": "app/(site)/gallery/page.js",
+  "/(site)/listings/page": "app/(site)/listings/page.js"
 }

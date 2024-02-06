@@ -58,8 +58,8 @@ const Amenities = () => {
                 title_2=""
                 image_2="/stainlesskitchen.jpg"
                 alt_2="Stainless Steel Appliance Amenities Photo"
-                width={90}
-                height={300}
+                width={300}
+                height={350}
             />
         </div >
     );

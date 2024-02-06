@@ -1,10 +1,11 @@
-import { Inter } from '@next/font/google'
-import styles from './styles/home.module.css'
+import { Inter } from '@next/font/google';
+import styles from './styles/home.module.css';
 import Slide from './components/imageSlide';
 import FeaturesCard from './components/card';
 import { Button } from 'react-bootstrap';
 import Link from 'next/link'
 import bgImg from '../../public/brightchairs.jpg';
+
 export const metadata = {
   title: 'Next.js',
 }
@@ -32,8 +33,8 @@ export default function Page() {
           title_2="Pittsburgh"
           image_2="/pitt.jpg"
           alt_2="Pittsburgh"
-          width={90}
-          height={300}
+          width={200}
+          height={400}
         />
         <h1 className={styles.title}>Features</h1>
         <div className={styles.features}>

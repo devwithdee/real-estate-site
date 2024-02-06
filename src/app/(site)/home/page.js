@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import { Inter } from '@next/font/google'
-import styles from '../../styles/home.module.css'
+import Head from 'next/head';
+import { Inter } from '@next/font/google';
+import styles from '../../styles/home.module.css';
 import Slide from '../../components/imageSlide';
 import FeaturesCard from '../../components/card';
 import { Button } from 'react-bootstrap';

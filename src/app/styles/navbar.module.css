@@ -10,10 +10,20 @@
     text-align: center;
 }
 
+.dropdown {
+    text-align: center !important;
+    padding: 0.25em !important;
+    margin: 0 !important;
+    background-color: black;
+  }
+
 .btn {
     background-color: #4E8286;
-    width: 5em;
-    height: 3em;
+    text-align: center;
+    padding: .25em;
+    min-width: 100%;
+    border-radius: 5px;
+    height: fit-content;
     border: none;
 }
 

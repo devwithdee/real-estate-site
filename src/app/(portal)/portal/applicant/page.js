@@ -1,35 +1,45 @@
 "use client"
+import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import styles from '../../../styles/applyPortal.module.css';
-import { useState } from 'react';
 
 const ApplicantPortal = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   async function onSubmit(event) {
     event.preventDefault();
-    setIsLoading(true); // Set loading to true when the request starts
+  setIsLoading(true);
 
-    try {
-      const formData = new FormData(event.currentTarget);
-      const response = await fetch('/api/submit', {
-        method: 'POST',
-        body: formData,
-      });
+  const formData = new FormData(event.currentTarget);
+  const formDataObject = {};
+  
+  // Convert FormData to an object
+  formData.forEach((value, key) => {
+    formDataObject[key] = value;
+  });
 
-      /* Handle response if necessary
+  try {
+    const response = await fetch('/api/submit', {
+      method: 'POST',
+      body: JSON.stringify(formDataObject),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (response.ok) {
       const data = await response.json();
-      */
-      // ...
-    } catch (error) {
-      // Handle error if necessary
-      console.error(error);
-    } finally {
-      setIsLoading(false); // Set loading to false when the request completes
+      console.log('User created:', data);
+    } else {
+      console.error('Failed to create user:', response.statusText);
     }
+  } catch (error) {
+    console.error('Error creating user:', error);
+  } finally {
+    setIsLoading(false);
   }
-
+}
   return (
     <div className={styles.container}>
       <h1 className={styles.h1}>Please create an account to fill out an application.</h1>
@@ -52,12 +62,12 @@ const ApplicantPortal = () => {
 
         <Form.Group className="mb-3" controlId="formPassword">
           <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" name="password" />
+          <Form.Control required type="password" placeholder="Password" name="password" />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formConfirmPassword">
           <Form.Label>Confirm Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" name="confirm_password" />
+          <Form.Control required type="password" placeholder="Password" name="confirm_password" />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicCheckbox"></Form.Group>

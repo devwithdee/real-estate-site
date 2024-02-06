@@ -13,8 +13,8 @@ const DetailsPage = (props) => {
                     className='d-block w-100'
                     src={props.image1}
                     alt=""
-                    width={100}
-                    height={300}
+                    width={200}
+                    height={400}
                 />
             </Carousel.Item>
             <Carousel.Item>
@@ -23,8 +23,8 @@ const DetailsPage = (props) => {
                     className='d-block w-100'
                     src={props.image2}
                     alt=""
-                    width={100}
-                    height={300}
+                    width={200}
+                    height={400}
                 />
             </Carousel.Item>
         </Carousel>
