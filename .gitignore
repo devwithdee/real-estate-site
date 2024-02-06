@@ -38,6 +38,7 @@ jspm_packages
 
 # Ignore Next.js build artifacts
 .next
+.next/
 
 # Ignore Next.js development server cache
 .next/cache
