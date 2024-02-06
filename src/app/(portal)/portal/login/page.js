@@ -29,7 +29,7 @@ const Login = () => {
     console.log('Form Data:', formDataObject);
   
     try {
-      const response = await fetch('/api/login/route', {
+      const response = await fetch('/api/login', {
         method: 'POST',
         body: JSON.stringify(formDataObject),
         headers: {
