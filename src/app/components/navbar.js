@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Nav } from 'react-bootstrap';
 import styles from '../styles/navbar.module.css';
 import Image from 'next/image';
-import { useAccount } from 'context/account';
+import { useAccount } from '../../../context/account';
 
 const Navbar = () => {
 

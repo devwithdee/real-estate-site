@@ -2,8 +2,8 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import styles from '../../../styles/login.module.css';
-import { useEffect, useState } from 'react';
-import { useAccount } from 'context/account';
+import { useState } from 'react';
+import { useAccount } from '../../../../../context/account';
 import { useRouter } from 'next/navigation';
 
 
