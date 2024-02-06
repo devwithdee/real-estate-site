@@ -23,7 +23,7 @@ const ApplicantPortal = () => {
     formDataObject.password = formDataObject.confirm_password;
   
     try {
-      const response = await fetch('/api/submit.js', {
+      const response = await fetch('../../api/submit.js', {
         method: 'POST',
         body: JSON.stringify(formDataObject),
         headers: {
