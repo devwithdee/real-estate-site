@@ -74,8 +74,6 @@ jspm_packages
 # Ignore the node_modules folder in the root of the project
 /node_modules
 
-# Ignore the .next folder
-.next
-
 # Ignore Vercel build output
 /out
+
