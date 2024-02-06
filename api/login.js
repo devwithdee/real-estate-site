@@ -2,7 +2,9 @@ import { db } from '@vercel/postgres';
 import { hash, compare } from 'bcrypt';
 
 export default async function login(req, res) {
-  
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method Not Allowed' });
+  } else {
   try {
     const { email, password } = req.body;
     if (!email || !password) {
@@ -46,4 +48,5 @@ export default async function login(req, res) {
     console.error('Error:', error);
     res.status(500).json({ error: 'Internal Server Error', details: error.message });
   }
+}
 }
