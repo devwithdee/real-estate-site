@@ -6,13 +6,12 @@ import { useState } from 'react';
 import { useAccount } from '../../../../../context/account';
 import { useRouter } from 'next/navigation';
 
-
 const Login = () => {
 
   const router = useRouter();
 
   const { isLoggedIn, setIsLoggedIn } = useAccount();
-  const [isLoading, setIsLoading] = useState(false);
+  const [ isLoading, setIsLoading ] = useState(false);
 
   async function onSubmit(event) {
     event.preventDefault();
@@ -26,10 +25,8 @@ const Login = () => {
       formDataObject[key] = value;
     });
   
-    console.log('Form Data:', formDataObject);
-  
     try {
-      const response = await fetch('/api/login.js', {
+      const response = await fetch('/login-api', {
         method: 'POST',
         body: JSON.stringify(formDataObject),
         headers: {
@@ -39,14 +36,11 @@ const Login = () => {
   
       if (response.ok) {
         const data = await response.json();
-        console.log('User found:', data);
         setIsLoggedIn(true);
         router.push('/portal/account');
-      } else {
-        console.error('No user found:', response.statusText);
       }
     } catch (error) {
-      console.error('Error getting user:', error);
+      //console.error('Error getting user:', error);
     } finally {
       setIsLoading(false);
     }

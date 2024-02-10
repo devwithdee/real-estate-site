@@ -4,13 +4,16 @@ import { Nav } from 'react-bootstrap';
 import styles from '../styles/navbar.module.css';
 import Image from 'next/image';
 import { useAccount } from '../../../context/account';
+import { useRouter } from 'next/navigation';
 
 const Navbar = () => {
 
+    const router = useRouter();
     const { isLoggedIn, setIsLoggedIn } = useAccount();
 
     const logout = () => {
         setIsLoggedIn(false);
+        router.push('/');
     };
 
     return (
