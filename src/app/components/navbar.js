@@ -6,10 +6,11 @@ import Image from 'next/image';
 import { useAccount } from '../../../context/account';
 import { useRouter } from 'next/navigation';
 
+
 const Navbar = () => {
 
     const router = useRouter();
-    const { isLoggedIn, setIsLoggedIn } = useAccount();
+    const { isLoggedIn, setIsLoggedIn, userFirstName, userLastName } = useAccount();
 
     const logout = () => {
         setIsLoggedIn(false);
@@ -50,8 +51,9 @@ const Navbar = () => {
                         </li>
                         <li className="nav-item dropdown">
                             {isLoggedIn ?
-                                <a className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Hello, User!
+                                <a className={`nav-link dropdown-toggle ${styles.dropdowntoggle}`} role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    
+                                    <i class="bi bi-person-gear"></i>
                                 </a> :
                                 <a className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Login
@@ -74,14 +76,11 @@ const Navbar = () => {
                                 </ul>
                             }
                         </li>
-                    </ul>
-
-                    <ul className="navbar-nav px-3">
-                        <li className="nav-item text-nowrap">
-                            <Link href='#' className="nav-link">
-                                +1(234)-567-8910
-                            </Link>
-                        </li>
+                        <li className={`nav-item text-nowrap ${styles.navli}`}>
+                                <Link href='#' className="nav-link">
+                                    +1(234)-567-8910
+                                </Link>
+                            </li>
                     </ul>
                 </div >
             </div>

@@ -5,9 +5,12 @@ const AccountContext = createContext();
 
 export const AccountProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userFirstName, setFirstName] = useState('');
+  const [userLastName, setLastName] = useState('');
+  const [userEmail, setEmail] = useState('');
 
   return (
-    <AccountContext.Provider value={{ isLoggedIn, setIsLoggedIn }}>
+    <AccountContext.Provider value={{ isLoggedIn, setIsLoggedIn, userFirstName, setFirstName, userLastName, setLastName, userEmail, setEmail }}>
       {children}
     </AccountContext.Provider>
   );

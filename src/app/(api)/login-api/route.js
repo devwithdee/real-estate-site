@@ -9,9 +9,9 @@ export async function POST(request) {
     if (!email || !password) {
       return NextResponse.json({ error: 'Missing email or password in the request body' }, { status: 400 });
     }
-    
+
     const { rows } = await sql`
-    SELECT password
+    SELECT password, first_name, last_name
     FROM users
     WHERE email = ${email}
     `;
@@ -20,13 +20,24 @@ export async function POST(request) {
       return NextResponse.json({ error: 'User not found' }, { status: 401 });
     }
 
-    const { password: dbPassword } = rows[0];
+    const {
+      password: dbPassword,
+      first_name: first_name,
+      last_name: last_name
+    } = rows[0];
     const passwordMatch = await compare(password, dbPassword);
 
     if (!passwordMatch) {
       return NextResponse.json({ error: 'Invalid password' }, { status: 401 });
     }
-    const response = NextResponse.json({ success: true }, { status: 200 });
+    const response = NextResponse.json({ 
+      success: true,
+      user: {
+        firstName: first_name,
+        lastName: last_name,
+        email: email
+      }
+     }, { status: 200 });
     response.headers.set("Content-Security-Policy", "default-src 'self'");
     response.headers.set("X-Content-Type-Options", "nosniff");
     response.headers.set("X-Frame-Options", "DENY");

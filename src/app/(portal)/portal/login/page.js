@@ -30,7 +30,7 @@ const Login = () => {
     });
   };
 
-  const { isLoggedIn, setIsLoggedIn } = useAccount();
+  const { setIsLoggedIn, setFirstName, setLastName, setEmail } = useAccount();
   const [isLoading, setIsLoading] = useState(false);
 
   async function onSubmit(event) {
@@ -56,6 +56,11 @@ const Login = () => {
 
       if (response.ok) {
         const data = await response.json();
+        if (data.success) {
+          setFirstName(data.user.firstName);
+          setLastName(data.user.lastName);
+          setEmail(data.user.email);
+        }
         setIsLoggedIn(true);
         showToastSuccess();
         setTimeout(() => {

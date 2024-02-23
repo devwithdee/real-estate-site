@@ -5,7 +5,6 @@ import { hash } from 'bcrypt';
 export async function POST(request) {
   try {
     const { first_name, last_name, email, password } = await request.json();
-
     if (!first_name || !last_name || !email || !password) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
     }
@@ -17,7 +16,14 @@ export async function POST(request) {
       VALUES (${first_name}, ${last_name}, ${email}, ${hashedPassword})
       RETURNING *;
     `;
-    const response = NextResponse.json({ success: true }, { status: 200 });
+    const response = NextResponse.json({ 
+      success: true,
+      user: {
+        firstName: first_name,
+        lastName: last_name,
+        email: email
+      }
+    }, { status: 200 });
     response.headers.set("Content-Security-Policy", "default-src 'self'");
     response.headers.set("X-Content-Type-Options", "nosniff");
     response.headers.set("X-Frame-Options", "DENY");

@@ -12,10 +12,29 @@
 
 .dropdown {
     text-align: center !important;
-    padding: 0.25em !important;
+    padding: 0.5em !important;
     margin: 0 !important;
     background-color: black;
+    flex-direction: row !important;
   }
+
+.dropdowntoggle {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    align-content: center;
+    padding: 3px !important;
+}
+
+.dropdowntoggle p {
+    margin: 0;
+    margin-right: 5px;
+}
+
+.dropdowntoggle i {
+    color: green;
+    font-size: 1.4em;
+}
 
 .btn {
     background-color: #4E8286;
@@ -33,4 +52,12 @@
 
 .number:hover {
     color: #4E8286;
+}
+
+@media screen and (max-width: 768px) {
+    .dropdown {
+        justify-items: flex-start;
+        align-items: flex-start;
+    }
+
 }
