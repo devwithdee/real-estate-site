@@ -5,24 +5,33 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import styles from '../../../styles/applyPortal.module.css';
 import { useAccount } from '../../../../../context/account';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ApplicantPortal = () => {
   const router = useRouter();
 
+  function showToastErrMessage() {
+    toast.error("Something went wrong, try again.", {
+      data: {
+        title: "Error toast.",
+        text: "This is an error message",
+      }
+    });
+  };
+
+  function showToastSuccess() {
+    toast.success("Success.. redirecting to account.", {
+      data: {
+        title: "Success toast.",
+        text: "This is a success message",
+      }
+    });
+  };
+
   const { isLoggedIn, setIsLoggedIn } = useAccount();
-  const [showSucessMessage, setShowSuccessMessage] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(() => {
-    if (isLoggedIn) {
-      setShowSuccessMessage(true);
-      const timer = setTimeout(() => {
-        setShowSuccessMessage(false);
-        router.push('/portal/account');
-      }, 5000);
-      return () => clearTimeout(timer);
-    }
-  }, [isLoggedIn, router, setShowSuccessMessage]);
 
   async function onSubmit(event) {
     event.preventDefault();
@@ -50,20 +59,23 @@ const ApplicantPortal = () => {
 
       if (response.ok) {
         const data = await response.json();
-        setIsLoggedIn(true);
+        showToastSuccess();
+        setTimeout(() => {
+          setIsLoggedIn(true);
+          router.push('/portal/account');
+        }, 2000);
+      } 
+      else if (response.error) {
+        showToastErrMessage();
       }
     } catch (error) {
       console.error('Error creating user:', error);
     } finally {
       setIsLoading(false);
     }
-
-
   }
   return (
     <div className={styles.container}>
-      {showSucessMessage ?
-        <h1> Success! </h1> :
         <div className={styles.container}>
           <h1 className={styles.h1}>Please create an account to fill out an application.</h1>
           <Form onSubmit={onSubmit}>
@@ -108,8 +120,8 @@ const ApplicantPortal = () => {
               {isLoading ? 'Loading...' : 'Submit'}
             </Button>
           </Form>
+          <ToastContainer />
         </div>
-      }
     </div>
   );
 };
