@@ -3,11 +3,19 @@ import DetailsPage from '../../../../components/details'
 import { useRouter } from 'next/navigation';
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react';
-
+import { useApplication } from '../../../../../../context/appstatus';
 
 const ApartmentData = () => {
   const router = useRouter();
   const [listings, setListings] = useState([]);
+  const { setUnit, setLocation, setAvailability, setBeds } = useApplication();
+
+  const handleApplicationSubmit = (unit, location, beds, formattedDate) => {
+      setUnit(unit);
+      setLocation(location);
+      setBeds(beds);
+      setAvailability(formattedDate);
+  };
   
   if (router.isFallback) {
     return <div>Loading...</div>;
@@ -65,6 +73,8 @@ const ApartmentData = () => {
         beds={listing.rooms}
         details1={listing.details[0]}
         details2={listing.details[1]}
+        unitnum={listing.unit}
+        handleApply={() => handleApplicationSubmit(listing.unit, listing.loc, listing.rooms, formattedDate)}
       />
     );
   });

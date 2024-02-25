@@ -1,20 +1,91 @@
 import { useAccount } from "../../../context/account";
 import React, { useState } from "react";
 import { useApplication } from "../../../context/appstatus";
-import styles from '../styles/application.module.css';
+import styles from '../styles/applicationpage.module.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-const AptApplication = () => {
-    const { userEmail, userFirstName, userLastName } = useAccount();
-    const { unit, location, availability, beds  } = useApplication();
+
+const ApplicationForm = () => {
     const [selectedDate, setSelectedDate] = useState('');
+    const { unit, location, availability, beds } = useApplication();
+    const { userEmail, userFirstName, userLastName } = useAccount();
+    const [isLoading, setIsLoading] = useState(false);
+    const dateApplied = new Date().toISOString().split('T')[0];
+
     const handleDateChange = (e) => {
         const selected = new Date(e.target.value);
         if (selected <= new Date(availability)) {
             setSelectedDate('');
+        } else if (selected <= new Date(dateApplied)) {
+            setSelectedDate('Date must be after: ' + dateApplied);
         } else {
-            setSelectedDate(selected);
+            setSelectedDate(selected.toISOString().split('T')[0]);
         }
     };
+
+    function showToastErrMessage() {
+        toast.error("Something went wrong, try again.", {
+          data: {
+            title: "Error toast.",
+            text: "This is an error message",
+          }
+        });
+    };
+
+    function showToastSuccess() {
+        toast.success("Success.. redirecting to account.", {
+          data: {
+            title: "Success toast.",
+            text: "This is a success message",
+          }
+        });
+    };
+
+    async function onSubmit(event) {
+        event.preventDefault();
+        setIsLoading(true);
+
+        const formData = new FormData(event.currentTarget);
+        const formDataObject = {};
+
+        // Convert FormData to an object
+        formData.forEach((value, key) => {
+          formDataObject[key] = value;
+        });
+
+        // Ensure the password field is accessed correctly
+        formDataObject.password = formDataObject.confirm_password;
+
+        try {
+          const response = await fetch('/application-api', {
+            method: 'POST',
+            body: JSON.stringify(formDataObject),
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          });
+
+          if (response.ok) {
+            const data = await response.json();
+            if (data.success) {
+              console.log("Success");
+            }
+            showToastSuccess();
+            setTimeout(() => {
+              setIsLoggedIn(true);
+            }, 2000);
+          } 
+          else if (response.error) {
+            showToastErrMessage();
+          }
+        } catch (error) {
+          console.error('Error creating user:', error);
+        } finally {
+          setIsLoading(false);
+        }
+    }
+
 
     return (
         <>
@@ -81,9 +152,11 @@ const AptApplication = () => {
                 </div>
                 <button type="submit" className={`btn btn-primary ${styles.btn}`}>Submit</button>
             </form>
+            <ToastContainer />
+
         </>
 
     )
 }
 
-export default AptApplication;
+export default ApplicationForm;

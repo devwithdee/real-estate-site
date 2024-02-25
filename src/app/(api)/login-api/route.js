@@ -11,7 +11,7 @@ export async function POST(request) {
     }
 
     const { rows } = await sql`
-    SELECT password, first_name, last_name
+    SELECT password, first_name, last_name, id
     FROM users
     WHERE email = ${email}
     `;
@@ -23,7 +23,8 @@ export async function POST(request) {
     const {
       password: dbPassword,
       first_name: first_name,
-      last_name: last_name
+      last_name: last_name,
+      id: id
     } = rows[0];
     const passwordMatch = await compare(password, dbPassword);
 
@@ -35,7 +36,8 @@ export async function POST(request) {
       user: {
         firstName: first_name,
         lastName: last_name,
-        email: email
+        email: email,
+        userId: id
       }
      }, { status: 200 });
     response.headers.set("Content-Security-Policy", "default-src 'self'");

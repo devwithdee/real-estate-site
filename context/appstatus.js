@@ -8,9 +8,10 @@ export const ApplicationProvider = ({ children }) => {
     const [location, setLocation] = useState('');
     const [availability, setAvailability] = useState(null); // Change to null if it should be a date object
     const [beds, setBeds] = useState(null);
+    const [appStatus, setAppStatus] = useState("Pending");
 
   return (
-    <ApplicationContext.Provider value={{ unit, location, availability, beds, setAvailability, setUnit, setLocation, setBeds }}>
+    <ApplicationContext.Provider value={{ appStatus, unit, location, availability, beds, setAvailability, setUnit, setLocation, setBeds }}>
       {children}
     </ApplicationContext.Provider>
   );

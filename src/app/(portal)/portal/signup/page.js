@@ -29,7 +29,7 @@ const ApplicantPortal = () => {
     });
   };
 
-  const { setIsLoggedIn, setFirstName, setLastName, setEmail } = useAccount();
+  const { setIsLoggedIn, setFirstName, setLastName, setEmail, setUserId } = useAccount();
   const [isLoading, setIsLoading] = useState(false);
 
 
@@ -63,6 +63,7 @@ const ApplicantPortal = () => {
           setFirstName(data.user.firstName);
           setLastName(data.user.lastName);
           setEmail(data.user.email);
+          setUserId(data.user.userId);
         }
         showToastSuccess();
         setTimeout(() => {

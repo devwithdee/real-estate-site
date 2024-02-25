@@ -8,9 +8,10 @@ export const AccountProvider = ({ children }) => {
   const [userFirstName, setFirstName] = useState('');
   const [userLastName, setLastName] = useState('');
   const [userEmail, setEmail] = useState('');
+  const [userId, setUserId] = useState(null);
 
   return (
-    <AccountContext.Provider value={{ isLoggedIn, setIsLoggedIn, userFirstName, setFirstName, userLastName, setLastName, userEmail, setEmail }}>
+    <AccountContext.Provider value={{ userId, setUserId, isLoggedIn, setIsLoggedIn, userFirstName, setFirstName, userLastName, setLastName, userEmail, setEmail }}>
       {children}
     </AccountContext.Provider>
   );

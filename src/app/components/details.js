@@ -31,7 +31,7 @@ const DetailsPage = (props) => {
             <div className={styles.abtwrapper}>
                 <h1>{props.location}</h1>
                 <h2>{props.title}</h2>
-                <Link href='/portal/application'>
+                <Link href='/portal/form'>
                     <Button className={styles.btn} onClick={props.handleApply}>Apply</Button>
                 </Link>
                 <p>${props.price}</p>
