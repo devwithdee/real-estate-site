@@ -1,0 +1,24 @@
+.container {
+    padding: 5em;
+    padding-top: 1em;
+}
+.form {
+    width: 50vw;
+}
+
+.btn {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: var(--teal);
+    width: 5em;
+    height: 3em;
+    border: none;
+    margin: 1em;
+}
+
+.btn:hover {
+    background-color: rgb(137, 210, 185) !important;
+    color: black;
+}

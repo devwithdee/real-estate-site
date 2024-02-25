@@ -32,7 +32,7 @@ const DetailsPage = (props) => {
                 <h1>{props.location}</h1>
                 <h2>{props.title}</h2>
                 <Link href='/portal/application'>
-                    <Button className={styles.btn}>Apply</Button>
+                    <Button className={styles.btn} onClick={props.handleApply}>Apply</Button>
                 </Link>
                 <p>${props.price}</p>
                 <p>Available on {props.availability}</p>
@@ -50,6 +50,7 @@ const DetailsPage = (props) => {
                     <li>{props.details1}</li>
                     <li>{props.details2}</li>
                 </ul>
+                <p>Unit: {props.unitnum}</p>
             </div>
         </div>
     );

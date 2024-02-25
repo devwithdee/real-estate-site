@@ -7,6 +7,7 @@ import dynamic from 'next/dynamic';
 import ImportBsJS from './components/importBsJS';
 import { AccountProvider } from "../../context/account";
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { ApplicationProvider } from "../../context/appstatus";
 
 
 const DynamicBootstrapScript = dynamic(() => import('bootstrap/dist/js/bootstrap.bundle.min.js'), {
@@ -14,22 +15,24 @@ const DynamicBootstrapScript = dynamic(() => import('bootstrap/dist/js/bootstrap
 });
 
 export default function RootLayout({ children }) {
-    return (
-      <html lang="en">
-        <Head>
+  return (
+    <html lang="en">
+      <Head>
         <title>Real Estate Website</title>
         <meta name="description" content="Real Estate Rental Site made by Donna-Jo Bohl" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"></link>
       </Head>
       <body>
-      <AccountProvider>
-      <ImportBsJS />
-        < Navbar />
-        {children}
-        < Footer />
+        <AccountProvider>
+          <ApplicationProvider>
+            <ImportBsJS />
+            < Navbar />
+            {children}
+            < Footer />
+          </ApplicationProvider>
         </AccountProvider>
-        </body>
-      </html>
-    )
-  }
+      </body>
+    </html>
+  )
+}

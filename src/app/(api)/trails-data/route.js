@@ -7,7 +7,7 @@ export async function GET(request) {
     try {
         const { rows } = await sql`
         SELECT id, title, date_available, pets_allowed, description, features,
-        bedrooms, images, details, apt_location, slug, price
+        bedrooms, images, details, apt_location, slug, price, unit
         FROM listings
         WHERE apt_location = 'Trails Apartments'
         ORDER BY bedrooms ASC`;
@@ -28,7 +28,8 @@ export async function GET(request) {
                 details: row.details,
                 loc: row.apt_location,
                 slug: row.slug,
-                price: row.price
+                price: row.price,
+                unit: row.unit
             }))
         }, { status: 200 });
 
