@@ -2,16 +2,16 @@
 import DetailsPage from '../../../../components/details'
 import { useRouter } from 'next/navigation';
 import { usePathname } from 'next/navigation'
-
-import Data from '../../../../lib/apartments'
+import { useEffect, useState } from 'react';
 
 
 const ApartmentData = () => {
-    const router = useRouter();
+  const router = useRouter();
+  const [listings, setListings] = useState([]);
   
-    if (router.isFallback) {
-      return <div>Loading...</div>;
-    }
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
 
   // Get the current pathname using usePathname
   const pathname = usePathname();
@@ -23,34 +23,57 @@ const ApartmentData = () => {
   const slug = pathSegments[pathSegments.length - 1];
 
   // Use routerSlug in the filter function
-  const apartmentData = Data.filter(data => data.slug === slug);
+  const meadowsSlug = listings.filter(listing => listing.slug === slug);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch('/meadows-data');
+        const data = await res.json();
+        if (res.ok) {
+          setListings(data.listings); // Update state with fetched listings
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchData();
+  }, []);
   
-   
-    const apartments = apartmentData.map((data) => {
-    
-        return (
-            <DetailsPage key={data}
-                image1 = {data.images[0]}
-                image2 = {data.images[1]}
-                width = {data.width}
-                location = {data.location}
-                title = {data.title}
-                price = {data.price}
-                availability = {data.availability}
-                about = { data.about }
-                features = { data. features}
-                beds = { data. bedrooms }
-                details1 = { data.details[0] }
-                details2 = { data.details[1]}
-            />
-        )
-    })
-    return ( 
-        <div>
-        {apartments}
-        </div>
-     );
+
+  const meadowsData = meadowsSlug.map((listing) => {
+    const dateObj = new Date(listing.date_available);
+    const formattedDate = dateObj.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+    });
+
+
+    return (
+      <DetailsPage
+        image1={listing.images[0]}
+        image2={listing.images[1]}
+        width={listing.width}
+        location={listing.loc}
+        title={listing.title}
+        price={listing.price}
+        availability={formattedDate}
+        about={listing.about}
+        features={listing.features}
+        beds={listing.rooms}
+        details1={listing.details[0]}
+        details2={listing.details[1]}
+      />
+    );
+  });
+
+  return (
+    <div>
+      {meadowsData}
+    </div>
+  );
 }
 
 

@@ -9,9 +9,9 @@ export default function Account() {
     const userPhone = null;
 
     const cards = [
-        { location: "loc", availableOn: "date",  description: "This is card 1", bedrooms: 1, applicationStatus: "Pending" },
-        { location: "loc", availableOn: "date",  description: "This is card 2",bedrooms: 1,  applicationStatus: "Pending" },
-        { location: "loc", availableOn: "date",  description: "This is card 3",bedrooms: 1,  applicationStatus: "Pending" },
+        { location: "", availableOn: "date",  description: "This is card 1", bedrooms: 1, applicationStatus: "Pending" },
+        { location: "", availableOn: "date",  description: "This is card 2",bedrooms: 1,  applicationStatus: "Pending" },
+        { location: "", availableOn: "date",  description: "This is card 3",bedrooms: 1,  applicationStatus: "Pending" },
     ];
 
     return (
