@@ -37,7 +37,7 @@ Project is created with:
 * listings
 
 ## Website
-[https://real-estate-site-three.vercel.app/](https://real-estate-site-three.vercel.app/)
+[View Website](https://real-estate-site-three.vercel.app/)
 
 
 ## ToDo:
