@@ -38,8 +38,3 @@ Project is created with:
 
 ## Website
 [View Website](https://real-estate-site-v3.vercel.app)
-
-
-## ToDo:
-* Finish rendering applications on account page
-* Add the ability to update account information
