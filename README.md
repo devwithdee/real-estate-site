@@ -8,7 +8,7 @@
 * [In Development](#todo)
 
 ## General info
-Personal project to showcase skills. Website for rental/real-estate company to showcase available listings, amentities and a rental application portal. This website is almost finished but is still in progress.
+Personal project to showcase skills. Website for rental/real-estate company to showcase available listings, amentities and a rental application portal. Sign up page disabled as this is a personal project and I want to prevent collecting personal information.
 	
 ## Technologies
 Project is created with:
@@ -19,7 +19,7 @@ Project is created with:
 
 ## Features
 * Bootstrap components and buttons
-* Applicantion portal
+* Applicant portal
 * Tenant Login/Registration
 * Apartment amentities page with photos and details
 * Dynamic routing for listings
